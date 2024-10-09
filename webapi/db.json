@@ -1,0 +1,142 @@
+{
+  "products": [
+    {
+      "name": "Cam",
+      "price": "45000",
+      "priceSale": "50000",
+      "urlImage": "",
+      "description": "Đây là quả cam",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Chà là",
+      "price": "120000",
+      "priceSale": "125000",
+      "urlImage": "",
+      "description": "Đây là quả chà là",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Dưa lưới",
+      "price": "50000",
+      "priceSale": "60000",
+      "urlImage": "",
+      "description": "Đây là quả dưa lưới",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Hồng",
+      "price": "35000",
+      "priceSale": "39000",
+      "urlImage": "",
+      "description": "Đây là quả hồng",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Kiwi",
+      "price": "130000",
+      "priceSale": "200000",
+      "urlImage": "",
+      "description": "Đây là quả kiwi",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Việt quất",
+      "price": "1390000",
+      "priceSale": "1500000",
+      "urlImage": "",
+      "description": "Đây là quả việt quất",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Lê sữa",
+      "price": "120000",
+      "priceSale": "",
+      "urlImage": "",
+      "description": "Đây là quả cam",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Nho",
+      "price": "60000",
+      "priceSale": "89000",
+      "urlImage": "",
+      "description": "Đây là quả nho",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Táo",
+      "price": "40000",
+      "priceSale": "87000",
+      "urlImage": "",
+      "description": "Đây là quả táo",
+      "hot": 0,
+      "stock": 100,
+      "category": "Trái cây"
+    },
+    {
+      "name": "Khoai",
+      "price": "16000",
+      "priceSale": "17000",
+      "urlImage": "",
+      "description": "Đây là củ khoai",
+      "hot": 0,
+      "stock": 100,
+      "category": "Rau củ"
+    },
+    {
+      "name": "Ớt",
+      "price": "42000",
+      "priceSale": "46000",
+      "urlImage": "",
+      "description": "Đây là quả ớt",
+      "hot": 0,
+      "stock": 100,
+      "category": "Rau củ"
+    },
+    {
+      "name": "Ớt chuông",
+      "price": "70000",
+      "priceSale": "120000",
+      "urlImage": "",
+      "description": "Đây là quả ớt chuông",
+      "hot": 0,
+      "stock": 100,
+      "category": "Rau củ"
+    },
+    {
+      "name": "Xà lách",
+      "price": "30000",
+      "priceSale": "40000",
+      "urlImage": "",
+      "description": "Đây là rau xà lách",
+      "hot": 0,
+      "stock": 100,
+      "category": "Rau củ"
+    }
+  ],
+  "categories":[
+    {
+        "name": "Rau củ"
+    },
+    {
+        "name": "Trái cây"
+    }
+  ]
+}

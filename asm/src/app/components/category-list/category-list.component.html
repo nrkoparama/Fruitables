@@ -1,0 +1,42 @@
+<div class="admin">
+  <div class="right-manager">
+
+    <p>Danh sách danh mục</p>
+
+    <button id="addBtn">
+      <a [routerLink]="['/admin/category-add']">
+        Thêm danh mục
+      </a>
+    </button>
+
+    <table>
+
+      <thead>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Thao tác</th>
+      </thead>
+
+      <tbody id="show">
+        <tr *ngFor="let category of categories, let i = index">
+          <td>
+            <div class="index">{{i+1}}</div>
+          </td>
+          <td>
+            <div class="name">{{category.name}}</div>
+          </td>
+          <td>
+            <div class="act">
+              <a class="edit" [routerLink]="['/admin/category-edit', category._id]"
+               style="color: black;"
+               onmouseover="this.style.color='#3498db';"
+               onmouseout="this.style.color='black';">Sửa</a>|<a
+               class="delete" (click)="onDelete(category._id)" style="color: black;"
+               onmouseover="this.style.color='#dc3545';" onmouseout="this.style.color='black';">Xóa</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>

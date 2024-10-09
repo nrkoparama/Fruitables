@@ -1,0 +1,86 @@
+<form action="" (ngSubmit)="onSubmit()" [formGroup]="productForm" enctype="multipart/form-data">
+  <div class="add-title">Sửa sản phẩm</div>
+  <div id="marginForm">
+
+    <div class="form-group">
+      <label for="name">Tên danh mục</label>
+      <input type="text" id="name" formControlName="name" [(ngModel)]="product.name" class="form-control">
+      <small *ngIf="!productForm.get('name')?.valid && productForm.get('name')?.touched" id="nameHelpId"
+        class="text-muted">
+        Tên danh mục cần ít nhất 3 kí tự
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Giá</label>
+      <input type="number" id="price" min="0" formControlName="price" [(ngModel)]="product.price" class="form-control">
+      <small *ngIf="!productForm.get('price')?.valid && productForm.get('price')?.touched" id="nameHelpId"
+        class="text-muted">
+        Giá không được để trống
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="priceSale">Giảm giá</label>
+      <input type="text" id="priceSale" formControlName="priceSale" [(ngModel)]="product.priceSale"
+        class="form-control">
+    </div>
+
+    <!-- nên fix lại thành chọn file ? -->
+    <div class="form-group">
+      <label for="urlImage">Hình ảnh</label>
+      <input type="file" id="urlImage" formControlName="urlImage" [(ngModel)]="product.urlImage" class="form-control">
+      <small *ngIf="!productForm.get('urlImage')?.valid && productForm.get('urlImage')?.touched" id="nameHelpId"
+        class="text-muted">
+        Hình ảnh không được bỏ trống
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Mô tả sản phẩm</label>
+      <!-- <input type="text" id="description" formControlName="description" [(ngModel)]="product.description" class="form-control"> -->
+       <textarea name="description" id="description" formControlName="description" [(ngModel)]="product.description" class="form-control"></textarea>
+
+      <small *ngIf="!productForm.get('description')?.valid && productForm.get('description')?.touched" id="nameHelpId"
+        class="text-muted">
+        Mô tả sản phẩm không được bỏ trống
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="hot">Hot</label>
+      <input type="number" id="hot" min="0" max="1" formControlName="hot" [(ngModel)]="product.hot" class="form-control">
+      <small *ngIf="!productForm.get('hot')?.valid && productForm.get('hot')?.touched" id="nameHelpId"
+        class="text-muted">
+        Hot không được bỏ trống
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="stock">Số lượng</label>
+      <input type="number" id="stock" min="0" formControlName="stock" [(ngModel)]="product.stock" class="form-control">
+      <small *ngIf="!productForm.get('stock')?.valid && productForm.get('stock')?.touched" id="nameHelpId"
+        class="text-muted">
+        Sổ lượng không được bỏ trống
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Danh mục</label>
+      <select name="category" id="category" formControlName="category" [(ngModel)]="product.category">
+        <option *ngFor="let category of categories" value="{{category._id}}">{{category.name}}</option>
+      </select>
+      <small *ngIf="!productForm.get('category')?.valid && productForm.get('category')?.touched" id="nameHelpId"
+      class="text-muted">
+      Danh mục không được bỏ trống
+    </small>
+    </div>
+
+
+
+    <div class="form-group">
+      <button>Thêm danh mục</button>
+    </div>
+  </div>
+</form>
+

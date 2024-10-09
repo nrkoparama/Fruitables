@@ -1,0 +1,61 @@
+.box-icon-search {
+  width: 260px;
+  height: 40px;
+  position: relative;
+}
+.btnSearch {
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(62, 55, 55, 0.159);
+  padding-block: 2px;
+  padding-inline: 20px !important;
+}
+.btnSearch:focus {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  outline: none;
+}
+.iconSearch {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+
+
+.menu-link {
+  position: relative; /* cần thiết để đặt menu con bên trong */
+  display: inline-block;
+}
+/* Ẩn menu khi chưa hover */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Hiển thị dưới thẻ a */
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  list-style: none;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 !important;
+}
+
+/* Hiển thị menu khi hover vào link */
+.menu-link:hover .dropdown-menu {
+  display: block;
+}
+
+/* Style cho các mục trong menu */
+.dropdown-menu li {
+  margin: 5px 0;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu li a:hover {
+  color: #007bff; /* Đổi màu khi hover vào item */
+}

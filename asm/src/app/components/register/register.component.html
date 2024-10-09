@@ -1,0 +1,59 @@
+<div class="form-container">
+  <div class="form-header">
+    <h1>Fruitables</h1>
+    <p>Xin chào !</p>
+  </div>
+  <form action="" [formGroup]="registerForm" (submit)="onRegister()">
+
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Tên đăng nhập" formControlName="name">
+      <small *ngIf="!registerForm.get('name')?.valid && registerForm.get('name')?.touched" id="nameHelpId"
+        class="text-muted">
+        Tên tài khoản cần ít nhất 6 ký tự
+      </small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="email" placeholder="Email" formControlName="email">
+      <small *ngIf="!registerForm.get('email')?.valid && registerForm.get('email')?.touched" id="nameHelpId"
+        class="text-muted">
+        Vui lòng nhập đúng email
+      </small>
+    </div>
+
+    <div class="form-group">
+      <input type="password" name="password" placeholder="Mật khẩu" formControlName="password">
+      <small *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched" id="nameHelpId"
+        class="text-muted">
+        Mật khẩu tối thiểu 8 ký tự ( 1 chữ hoa và 1 ký tự đặc biệt )
+      </small>
+    </div>
+
+    <div class="form-group">
+      <input type="password" name="rePassword" placeholder="Nhập lại mật khẩu" formControlName="rePassword">
+      <small *ngIf="!registerForm.get('rePassword')?.valid && registerForm.get('rePassword')?.touched" id="nameHelpId"
+        class="text-muted">
+        Vui lòng nhập lại mật khẩu
+      </small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="phoneNumber" placeholder="Số điện thoại" formControlName="phoneNumber">
+      <small *ngIf="!registerForm.get('phoneNumber')?.valid && registerForm.get('phoneNumber')?.touched" id="nameHelpId"
+        class="text-muted">
+        Vui lòng nhập số điện thoại
+      </small>
+    </div>
+
+    <div class="form-group" style="display: none;">
+      <input type="number" name="role" value= "0" formControlName="role">
+    </div>
+
+    <div class="form-group">
+      <button type="submit">Đăng ký</button>
+    </div>
+  </form>
+  <div class="form-footer">
+    <p>Bạn đã có tài khoản? <a [routerLink]="['/account/login']">Đăng nhập</a></p>
+  </div>
+</div>

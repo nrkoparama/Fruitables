@@ -1,0 +1,39 @@
+<div class="admin">
+  <div class="left-manager">
+    <div class="admin-logo">
+      <a [routerLink]="['/home']">FruitAbles</a>
+    </div>
+    <div class="manage-category">
+      <ul>
+        <li>
+          <img src="./assets/img/iconmonstr-clipboard-1.svg" alt="">
+          <a [routerLink]="['/admin/product-list']">Sản phẩm</a>
+        </li>
+        <li>
+          <img src="./assets/img/iconmonstr-shipping-box-2.svg" alt="">
+          <a [routerLink]="['/admin/category-list']">Danh mục</a>
+        </li>
+
+        <li>
+          <img src="./assets/img/iconmonstr-user-20.svg" alt="">
+          <a [routerLink]="['/admin/user-list']">Người dùng</a>
+        </li>
+        <li>
+          <img src="./assets/img/iconmonstr-shopping-cart-25.svg" alt="">
+          <a href="">Đơn hàng</a>
+        </li>
+      </ul>
+    </div>
+    <div class="admin-info">
+      <div class="border-img">
+        <img src="./assets/img/admin1.jpg" width="100px" height="100px" alt="">
+      </div>
+      <div class="admin-name">Tấn Đạt</div>
+
+    </div>
+  </div>
+
+  <div class="right-manager">
+    <router-outlet></router-outlet>
+  </div>
+

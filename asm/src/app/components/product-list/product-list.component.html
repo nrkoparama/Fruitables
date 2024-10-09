@@ -1,0 +1,76 @@
+<div class="admin">
+  <div class="right-manager">
+
+    <p>Danh sách sản phẩm</p>
+
+    <button id="addBtn">
+      <a [routerLink]="['/admin/product-add']">
+        Thêm sản phẩm
+      </a>
+    </button>
+    <!--
+    <div class="searchByCate" >
+      <select name="category" id="category" formControlName="category" [(ngModel)]="product.category">
+        <option *ngFor="let category of categories" value="{{category._id}}">{{category.name}}</option>
+      </select>
+    </div> -->
+
+    <table>
+
+      <thead>
+        <!-- <th>STT</th> -->
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Giảm giá</th>
+        <th>Hình ảnh</th>
+        <th>Danh mục</th>
+        <th>Thao tác</th>
+      </thead>
+
+      <tbody id="show">
+
+        <tr *ngFor="let product of paginatedProducts, let i = index">
+          <!-- <td>
+            <div class="index">{{i+1}}</div>
+          </td> -->
+
+          <td>
+            <div class="name">{{product.name}}</div>
+          </td>
+
+          <td>
+            <div class="price">{{product.price}}</div>
+          </td>
+
+          <td>
+            <div class="priceSale">{{product.priceSale}}</div>
+          </td>
+
+          <td>
+            <div class="image"><img src="../assets/img/{{product.urlImage}}" width="120" height="100" alt=""></div>
+          </td>
+
+          <td>
+            <div class="category">{{product.category.categoryName}}</div>
+
+          </td>
+
+          <td>
+            <div class="act">
+              <a class="edit" [routerLink]="['/admin/product-edit', product._id]" style="color: black;"
+                onmouseover="this.style.color='#3498db';" onmouseout="this.style.color='black';">Sửa</a>|<a
+                class="delete" (click)="onDelete(product._id)" style="color: black;"
+                onmouseover="this.style.color='#dc3545';" onmouseout="this.style.color='black';">Xóa</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Trước</button>
+      <p>{{currentPage}} / {{totalPages}} trang</p>
+      <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Tiếp</button>
+    </div>
+
+  </div>

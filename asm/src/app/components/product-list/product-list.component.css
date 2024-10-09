@@ -1,0 +1,73 @@
+.right-manager {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-manager p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button#addBtn {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+button#addBtn a {
+  text-decoration: none;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  background-color: #34495e;
+  color: white;
+  padding: 10px;
+}
+
+tbody td {
+  padding: 10px;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+}
+
+tbody tr:hover {
+  background-color: #dfe6e9;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image img {
+  mix-blend-mode: darken;
+}
+
+.pagination {
+  width: 600px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+.pagination button {
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  border: 1px solid #333;
+}
+.pagination p {
+  width: 140px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+}
